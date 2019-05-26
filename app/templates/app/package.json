@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     <% if (stylingSupport.includes('Sass')) { %>"@stencil/sass": "latest",<%}%>
+    <% if (stylingSupport.includes('CSS')) { %>"@stencil/postcss": "latest",<%}%>
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest"<%if(testSupport){%>,
     "@types/jest": "^21.1.1",
