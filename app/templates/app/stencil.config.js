@@ -5,7 +5,7 @@ const autoprefixer = require('autoprefixer');<% } %>
 exports.config = {
   publicPath: '/dist',
     plugins: [
-      <% if (stylingSupport.includes('Sass')) { %>sass(),<% } %>
+      <% if (stylingSupport.includes('Sass')) { %>sass({injectGlobalPaths: "src/global/global.sass"}),<% } %>
       <% if (stylingSupport.includes('CSS')) { %>postcss({plugins: [autoprefixer()]}),<% } %>
     ],
     bundles: [

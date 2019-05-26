@@ -1,8 +1,9 @@
-import { Component } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: '<%= paramCaseComponentName %>',
-  styleUrl: '<%=paramCaseComponentName%>.<% if(stylingSupport.includes("Sass")) { %>scss<% } %><% if(!stylingSupport.includes("Sass")) { %>css<% } %>'
+  styleUrl: '<%=paramCaseComponentName%>.<% if(stylingSupport.includes("Sass")) { %>scss<% } %><% if(!stylingSupport.includes("Sass")) { %>css<% } %>',
+  shadow: false
 })
 export class <%=componentName%> {
   render() {

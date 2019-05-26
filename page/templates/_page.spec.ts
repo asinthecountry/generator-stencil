@@ -1,4 +1,4 @@
-import { render } from '@stencil/core/testing';
+import { newSpecPage } from '@stencil/core/testing';
 import { <%=pageName%> } from './<%=paramCasePageName%>';
 
 describe('<%=paramCasePageName%>', () => {
@@ -8,7 +8,7 @@ describe('<%=paramCasePageName%>', () => {
 
   describe('rendering', () => {
     beforeEach(async () => {
-      await render({
+      await newSpecPage({
         components: [<%=pageName%>],
         html: '<<%=paramCasePageName%>></<%=paramCasePageName%>>'
       });

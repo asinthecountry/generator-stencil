@@ -1,9 +1,10 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 <% if (optionalFeatures.includes('Helmet')) { %>import Helmet from '@stencil/helmet';<% } %>
 
 @Component({
   tag: '<%= paramCasePageName %>',
-  styleUrl: '<%= paramCasePageName %>.<% if(stylingSupport.includes("Sass")) { %>scss<% } %><% if(!stylingSupport.includes("Sass")) { %>css<% } %>'
+  styleUrl: '<%= paramCasePageName %>.<% if(stylingSupport.includes("Sass")) { %>scss<% } %><% if(!stylingSupport.includes("Sass")) { %>css<% } %>',
+  shadow: true
 })
 export class <%=pageName%> {
   <% if (optionalFeatures.includes('Helmet')) { %>
